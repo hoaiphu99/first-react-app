@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom'
 
 const Cocktail = ({id, name, image, info, glass}) => {
   return (
-    <article className='cocktail'>
+    <Link to={`/cocktail/${id}`} >
+          <article className='cocktail'>
       <div className='img-container'>
         <img src={image} alt={name} />
       </div>
@@ -11,11 +12,11 @@ const Cocktail = ({id, name, image, info, glass}) => {
         <h3>{name}</h3>
         <h4>{glass}</h4>
         <p>{info}</p>
-        <Link to={`/cocktail/${id}`} className='btn btn-primary'>
-          details
-        </Link>
+        
       </div>
     </article>
+        </Link>
+    
   )
 }
 
